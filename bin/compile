@@ -19,7 +19,7 @@ warnings=$(mktemp)
 mongo_version="5.0.28"
 # Install mongodb to use mongo commands
 echo "-----> Downloading and installing mongodb version ${mongo_version}..."
-[[ $STACK = "heroku-22" ]] && os_id="ubuntu2204"
+[[ $STACK = "heroku-22" ]] && os_id="ubuntu2004"
 
 file_name="mongodb-linux-x86_64-${os_id}-${mongo_version}.tgz"
 folder_name=`echo "$file_name" | sed 's/\.tgz$//'`
