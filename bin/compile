@@ -24,7 +24,7 @@ echo "-----> Downloading and installing mongodb version ${mongo_version}..."
 file_name="mongodb-linux-x86_64-${os_id}-${mongo_version}.tgz"
 folder_name=`echo "$file_name" | sed 's/\.tgz$//'`
 download_url="https://fastdl.mongodb.org/linux/${file_name}"
-curl $download_url -s -o - | tar xzf - -C /tmp
+curl $download_url -s -o - | tar xf - -C /tmp
 
 # Move mongodb binaries into the app directory
 mv "/tmp/${folder_name}"/* $heroku_dir/mongo
